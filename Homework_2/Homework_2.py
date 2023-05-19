@@ -10,10 +10,3 @@ else:
         print("Not Weird")
     elif 6 <= n <= 20:
         print("Weird")
-
-
-
-
-
-
-
