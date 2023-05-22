@@ -28,10 +28,22 @@
 #         f.write(random_number + '\n')
 
 # 5
-a = open('pancakes.txt', 'r')
-a.read()
-print(len(a))
+# a = 'pancakes.txt'
+# words = 0
+# with open(a, 'r') as file:
+#     for i in file:
+#         word = i.split()
+#         words += len(word)
+# print('Кількість слів у файлі :', words)
 
+# 6
+a = 'numbers_6'
+summ = 0
+with open('numbers_6.txt', 'r') as file:
+    for i in file:
+        numbers = i.split()
+        summ += sum(a)
+print('Сумма чисел у тексті :', summ)
 
 
 
