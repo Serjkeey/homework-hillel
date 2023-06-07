@@ -3,21 +3,23 @@ my_file = 'pancakes.txt'
 digits = []
 with open(my_file, 'r') as file:
     for line in file:
-        for i in line:
-            if i.isdigit():
-                digits.append(int(i))
+        for word in line:
+            if word.isdigit():
+                digits.append(int(word))
 print(digits)
 
 # 2
-f = open('data.txt', 'w')
-a = input('Введіть текст: ')
-f.write(a)
+text = input('Введіть текст : ')
+with open('data.txt', 'w') as file:
+    file.write(text)
+print('Текст був успішно записаний!')
 
 # 3
-f = open('numbers.txt', 'w')
-a = int(input('Скільки чисел ви бажаєте записати: '))
-n = int(input('Запишіть ці числа: '))
-f.write(n)
+n = int(input('Введіть кількість чисел:  '))
+with open('numbers.txt', 'w') as file:
+    numbers = input('Введіть числа: ').split()
+    file.write(''.join(numbers))
+print('Числа були записані в файл.')
 
 # 4
 import random
@@ -53,18 +55,3 @@ with open('text.txt', 'r') as file:
     top_words = word_counts.most_common(5)
 for word, count in top_words:
     print(f'{word} - {count} разів' )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
