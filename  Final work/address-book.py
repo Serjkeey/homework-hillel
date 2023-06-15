@@ -35,3 +35,18 @@ class contact:
 
     def set_birthday(self, birthday):
         self.birthday = birthday
+
+
+class address_book:
+    def __init__(self):
+        self.contacts = []
+
+    def add_contact(self, contact):
+        self.contacts.append(contact)
+
+    def remove_contact(self, contact):
+        self.contacts.remove(contact)
+
+    def edit_contact(self, contact, new_contact):
+        index = self.contacts.index(contact)
+        self.contacts[index] = new_contact
