@@ -50,3 +50,29 @@ class address_book:
     def edit_contact(self, contact, new_contact):
         index = self.contacts.index(contact)
         self.contacts[index] = new_contact
+
+    def search_by_name(self, name):
+        results = []
+        for contact in self.contacts:
+            if contact.get_name().lower() == name.lower():
+                results.append(contact)
+        return results
+
+    def search_by_phone_number(self, phone_number):
+        results = []
+        for contact in self.contacts:
+            if contact.get_phone_number() == phone_number:
+                results.append(contact)
+        return results
+
+    def sort_by_name(self):
+        self.contacts.sort(key=lambda contact: contact.get_name())
+
+    def sort_by_surname(self):
+        self.contacts.sort(key=lambda contact: contact.get_surname())
+
+    def load_contacts_from_file(self, file_name):
+        pass
+
+    def save_contacts_to_file(self, file_name):
+        pass
